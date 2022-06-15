@@ -346,10 +346,12 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEditor.UI.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/UnityEngine.UI.ref.dll"
 "Assets/Scripts/Ball.cs"
+"Assets/Scripts/CanvasManager.cs"
 "Assets/Scripts/FollowCamera.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Ring.cs"
 "Assets/Scripts/RotateRings.cs"
+"Assets/Scripts/Singleton.cs"
 -langversion:9.0
 
 /deterministic

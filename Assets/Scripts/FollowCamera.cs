@@ -4,16 +4,19 @@ using UnityEngine;
 
 public class FollowCamera : MonoBehaviour
 {
-    public Rigidbody rb;
+    [SerializeField] Transform target;
     Vector3 Distance;
+    [SerializeField] float SmoothRate = 0.04f;
     void Start()
     {
-        Distance = transform.position - rb.transform.position;
+        Distance = transform.position - target.position;
     }
 
     // Update is called once per frame
     void LateUpdate()
     {
-        transform.position = Distance + rb.transform.position;
+
+        Vector3 newposition = Vector3.Lerp(transform.position, target.position+Distance,SmoothRate);
+        transform.position= newposition;
     }
 }

@@ -4,15 +4,12 @@ using UnityEngine;
 
 public class RotateRings : MonoBehaviour
 {
-    public float RotateSpeed;
+    [SerializeField] private float RotateSpeed;
     private float MoveX;
 
     void Update()
     {
-        MoveX = Input.GetAxis("Mouse X");
-        if (Input.GetMouseButton(0))
-        {
-            transform.Rotate(0f, MoveX * RotateSpeed, 0f);
-        }
+        MoveX = Input.GetAxis("Horizontal");
+        transform.Rotate(0f, MoveX * -RotateSpeed, 0f);
     }
 }

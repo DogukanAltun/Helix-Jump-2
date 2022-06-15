@@ -1,13 +1,9 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 public class GameManager : MonoBehaviour
 {
-    private int score;
-    public Text scoreText;
-    private GameManager gm;
     void Start()
     {
         
@@ -17,11 +13,6 @@ public class GameManager : MonoBehaviour
     void Update()
     {
         
-    }
-    public void GameScore(int ring)
-    {
-        score += ring;
-        scoreText.text = "Score: " + score.ToString();
     }
     public void RestartGame()
     {

@@ -4,20 +4,20 @@ using UnityEngine;
 
 public class Ring : MonoBehaviour
 {
-    public Transform ball;
-    private GameManager gm;
+    [SerializeField] private Transform ball;
     void Start()
     {
-        gm = GameObject.FindObjectOfType<GameManager>();
+   
     }
 
     // Update is called once per frame
     void Update()
     {
+
         if( transform.position.y > ball.position.y+1f)
         {
             Destroy(gameObject);
-            gm.GameScore(25);
+            Singleton.Instance.CM.GameScore(25);
         }
     }
 }
